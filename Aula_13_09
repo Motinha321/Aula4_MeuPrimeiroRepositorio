@@ -1,0 +1,683 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO9P2GODBlyvmJqwuFJiBQQ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Motinha321/Aula4_MeuPrimeiroRepositorio/blob/main/Aula_13_09\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Como dar atributos à variáveis"
+      ],
+      "metadata": {
+        "id": "Eh6N1ZjaDOxO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 28,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xm4d6eNpCk5t",
+        "outputId": "a0001360-493e-418e-c8be-3ffda6264654"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite seu nome inteiro: Eduardo Francisco Mota dos Santos\n",
+            "Eduardo Francisco Mota dos Santos\n"
+          ]
+        }
+      ],
+      "source": [
+        "x = input('Digite seu nome inteiro: ')\n",
+        "print(x)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#UPPER converte tudo para maiúsculo"
+      ],
+      "metadata": {
+        "id": "VpMC1zMQDPRu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x.upper()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "kdo7jRA9C00F",
+        "outputId": "8663ce70-4d6f-4836-e9c9-1a6e83b168db"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'EDUARDO FRANCISCO MOTA DOS SANTOS'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 29
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "LOWER converte tudo para minúsculo"
+      ],
+      "metadata": {
+        "id": "WWYp4ncNDPZF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x.lower()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "wgWe0qbfC3ME",
+        "outputId": "2c6dd64d-9f9c-4b48-c6e2-c014ab53a8aa"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'eduardo francisco mota dos santos'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 30
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zfkDxYnjC9xs",
+        "outputId": "ce2b7b86-d63e-4056-b743-eb51236cc881"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "str"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 31
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##SPLIT divide tudo"
+      ],
+      "metadata": {
+        "id": "QsRXJwreDPuV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x.split()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "k5njM793C_Ml",
+        "outputId": "dcf56e1f-c71d-44f2-fa7a-85490021ba39"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Eduardo', 'Francisco', 'Mota', 'dos', 'Santos']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 32
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x.split(maxsplit=1)\n",
+        "type(x.split(maxsplit=1))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A66oRKCzDHzM",
+        "outputId": "d3eb4e63-7428-4d29-c5a3-cc87aa905c06"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "list"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 33
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista = x.split(maxsplit=5)"
+      ],
+      "metadata": {
+        "id": "tDmTc2cTDwZk"
+      },
+      "execution_count": 35,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "R3mRC3R2ESTo",
+        "outputId": "353b04f9-3fd5-4f0f-9f4d-ed3e4b598030"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Eduardo', 'Francisco', 'Mota', 'dos', 'Santos']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 37
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Len mostra o tamanho"
+      ],
+      "metadata": {
+        "id": "1nyQa7R1FLZd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(lista)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nbkiqYMYEtMt",
+        "outputId": "7ddc1ecb-0c3f-4830-e73a-c995adff2b66"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 42
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[0]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "-sQUL28PE2q0",
+        "outputId": "1d5ea89c-d8ff-4c5e-f69b-34efc928f3f2"
+      },
+      "execution_count": 43,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Eduardo'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 43
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[0] = 'Duardo'"
+      ],
+      "metadata": {
+        "id": "caRcN1u4FTns"
+      },
+      "execution_count": 46,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eCsTvjSgFehT",
+        "outputId": "7b530313-d9c2-49c2-b335-d3811d408a24"
+      },
+      "execution_count": 47,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Duardo', 'Francisco', 'Mota', 'dos', 'Santos']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 47
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista[5] = 'Presidente Prudente' #Deu erro pois precisa utilizar o comando append"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 165
+        },
+        "id": "GIODAOp-Fjx9",
+        "outputId": "045fb81f-7b6e-4944-fe20-8035001443eb"
+      },
+      "execution_count": 112,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndexError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-112-a107a9f7c9ad>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mlista\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;36m5\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m'Presidente Prudente'\u001b[0m \u001b[0;31m#Deu erro pois precisa utilizar o comando append\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m: list assignment index out of range"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista"
+      ],
+      "metadata": {
+        "id": "xjepfmf-FswB",
+        "outputId": "f3c65ccb-bde6-47fe-b2c8-2c836f72ff3b",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 49,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Duardo', 'Francisco', 'Mota', 'dos', 'Presidente Prudente']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 49
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##APPEND função para acrescentar elementos em uma lista"
+      ],
+      "metadata": {
+        "id": "PFgtbEZfF-Ls"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista.append('Presidente Prudente')"
+      ],
+      "metadata": {
+        "id": "beAcqBXkFtix"
+      },
+      "execution_count": 53,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista"
+      ],
+      "metadata": {
+        "id": "pOOxdZFVGIJK",
+        "outputId": "533388df-965a-4624-ecba-920853200326",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 54,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Duardo', 'Francisco', 'Mota', 'dos', 'Santos', 'Presidente Prudente']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 54
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in lista:\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "id": "dV2xjVLtGJEx",
+        "outputId": "4d394cd0-5caa-410a-c38d-10c8894efee1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 68,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Duardo\n",
+            "Francisco\n",
+            "Mota\n",
+            "dos\n",
+            "Santos\n",
+            "Presidente Prudente\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = ' '"
+      ],
+      "metadata": {
+        "id": "OMYAg4tPJEhY"
+      },
+      "execution_count": 96,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(a)"
+      ],
+      "metadata": {
+        "id": "PSQjREiSI4LY",
+        "outputId": "25c8df14-2f2e-4ef1-b3a6-d77848acc2e8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 97,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in lista:\n",
+        " a = a + ' ' + i"
+      ],
+      "metadata": {
+        "id": "64tABa0KKSQx"
+      },
+      "execution_count": 98,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a"
+      ],
+      "metadata": {
+        "id": "GjZII1gJKtU2",
+        "outputId": "31abef06-77b5-42c2-ab3f-4a3438b9ccd5",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        }
+      },
+      "execution_count": 99,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'  Duardo Francisco Mota dos Santos Presidente Prudente'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 99
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista"
+      ],
+      "metadata": {
+        "id": "h_k9GlJVLZ_B",
+        "outputId": "50c3ced7-1c02-48e1-ea65-073014053c78",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 104,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Duardo', 'Francisco', 'Mota', 'dos', 'Santos', 'Presidente Prudente']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 104
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "del(lista[-1])"
+      ],
+      "metadata": {
+        "id": "8BBMlO8wMrSK"
+      },
+      "execution_count": 109,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista"
+      ],
+      "metadata": {
+        "id": "v12cD-yHM8rR",
+        "outputId": "5f860df3-b920-4734-a05c-a1c376b47444",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 111,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Duardo', 'Francisco', 'Mota', 'dos', 'Santos']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 111
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista.remove('Duardo')"
+      ],
+      "metadata": {
+        "id": "iWUhlXbSNq3P"
+      },
+      "execution_count": 113,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista"
+      ],
+      "metadata": {
+        "id": "aXjOEFfvOJAI",
+        "outputId": "44d55b54-4d7d-4868-be1c-efccbe0e0425",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 114,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Francisco', 'Mota', 'dos', 'Santos']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 114
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "mbJlbbHbOJzf"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
